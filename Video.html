@@ -8,30 +8,51 @@
 </head>
 <body>
     <div id="title">My custom video player</div>
-    <div id="video" class="video">
+    <div class="video">
         <video src="Countdown To Rocket Launching.mp4"></video>
         <!--
         The video was found on https://www.pexels.com/
         You can find it on
         https://vod-progressive.akamaized.net/exp=1597021254~acl=%2A%2F579959710.mp4%2A~hmac=de91ffb6abd95300f1b9e4192a4837a9107ef3a13d74fa25842ac55b136e3423/vimeo-prod-skyfire-std-us/01/633/7/178167299/579959710.mp4
         -->
-        <div id="controls">
-            <div id="play_pause" tabindex="0">&#9654</div>
-            <div id="line" class="line" tabindex="0">
+        <div class="controls">
+            <div class="play_pause" tabindex="0">&#9654</div>
+            <div class="line" class="line" tabindex="0">
                 <div class="circle"></div>
-                <div id="counter" class="counter">00:00</div>
+                <div class="counter" class="counter">00:00</div>
             </div>
-            <div id="time"><span id="current_time">00:00</span> / <span id="duration"></span></div>
-            <div id="vol">
-                <div id="btn_volume" tabindex="0">&#128266</div>
-                <div id="content_volume">
-                    <div id="volume" class="line" tabindex="0">
+            <div class="time"><span class="current_time">00:00</span> / <span class="duration"></span></div>
+            <div class="vol">
+                <div class="btn_volume" tabindex="0">&#128266</div>
+                <div class="content_volume">
+                    <div class="volume" class="line" tabindex="0">
                         <div class="circle"></div>
-                        <div id="counter_s" class="counter"></div>
+                        <div class="counter_s" class="counter"></div>
                     </div>
                 </div>
             </div>
-            <div id="full_screen" tabindex="0">&#x26F6</div>
+            <div class="full_screen" tabindex="0">&#x26F6</div>
+        </div>
+    </div>
+    <div class="video">
+        <video src="Countdown To Rocket Launching.mp4"></video>
+        <div class="controls">
+            <div class="play_pause" tabindex="0">&#9654</div>
+            <div class="line" class="line" tabindex="0">
+                <div class="circle"></div>
+                <div class="counter" class="counter">00:00</div>
+            </div>
+            <div class="time"><span class="current_time">00:00</span> / <span class="duration"></span></div>
+            <div class="vol">
+                <div class="btn_volume" tabindex="0">&#128266</div>
+                <div class="content_volume">
+                    <div class="volume" class="line" tabindex="0">
+                        <div class="circle"></div>
+                        <div class="counter_s" class="counter"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="full_screen" tabindex="0">&#x26F6</div>
         </div>
     </div>    
     <script src="Video.js"></script>

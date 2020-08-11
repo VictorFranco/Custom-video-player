@@ -3,8 +3,9 @@ body{
     min-height: 100vh;
     background: #111;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
 }
 #title{
     position: absolute; 
@@ -13,17 +14,21 @@ body{
     font-size: 40px; 
     text-align: center;
 }
-#video{
+body>div:nth-child(2){
+    margin-top: 100px;
+}
+.video{
     overflow: hidden;
     background: black;
-    width: 500px;
+    max-width: 500px;
     position: relative;
+    margin-bottom: 100px;
 }
 video{
     width: 100%;
     margin-bottom: -4px;
 }
-#controls{
+.controls{
     position: absolute;
     opacity: 0;
     background: rgba(0,0,0,.6);
@@ -39,27 +44,27 @@ video{
     align-items: center;
     gap: 10px;
 }
-#controls>div:nth-child(1){
+.controls>div:nth-child(1){
     margin-left: 10px;
 }
-#controls>div:nth-child(2){
+.controls>div:nth-child(2){
     flex-grow: 1;
 }
-#controls>div:nth-child(3){
+.controls>div:nth-child(3){
     cursor: default;
     font-size: 15px;
 }
-#controls>div:last-child{
+.controls>div:last-child{
     margin-right: 10px;
 }
-#controls>div{
+.controls>div{
     cursor: pointer;
 }
-#video:hover #controls,#controls:focus-within{
+.video:hover .controls,.controls:focus-within{
     opacity: 1;
     bottom: 0;
 }
-#video:hover #controls{
+.video:hover .controls{
     transition: bottom 1s;
 }
 .line{
@@ -74,7 +79,7 @@ video{
     width: var(--pos);
     height: 10px;
 }
-#line::before{
+.line::before{
     background: red;
 }
 .line .circle{
@@ -116,23 +121,23 @@ video{
 .line:hover .circle,.line:focus .circle{
     transform: translateX(-50%) scale(1.5);
 }
-#volume{
+.volume{
     flex-grow: 1;
     margin-right: 20px;
 }
-#volume::before{
+.volume::before{
     background: midnightblue;
 }
-#vol{
+.vol{
     position: relative;
     align-self: stretch;
     display: flex;
     align-items: center;
 }
-#btn_volume:focus+div,#vol:hover>div,#vol:focus-within>div{
+.btn_volume:focus+div,.vol:hover>div,.vol:focus-within>div{
     display: flex;
 }
-#content_volume{
+.content_volume{
     display: none;
     position: absolute;
     background: rgba(0,0,0,.6);
@@ -144,7 +149,7 @@ video{
     transform: rotate(-90deg);
     align-items: center;
 }
-#video:fullscreen{
+.video:fullscreen{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,7 +158,10 @@ video{
     body{
         background: #222;
     }
-    #controls>div:nth-child(3){
+    #title{
+        font-size: 30px;
+    }
+    .controls>div:nth-child(3){
         position: absolute;
         background: rgba(0,0,0,.6);
         left: 0;
@@ -162,7 +170,7 @@ video{
     }
 }
 @media (max-height: 400px) {
-    #title{
+    .title{
         display: none;
     }
 }
