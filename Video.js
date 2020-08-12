@@ -80,6 +80,7 @@
         };
         this.time_keyboard_navigation=function(e){
             if(e.keyCode==39||e.keyCode==32||e.keyCode==37){
+                e.preventDefault();
                 let current_time=this.video_tag.currentTime;
                 let duration=this.video_tag.duration;
                 if(e.keyCode==39||e.keyCode==32) 
@@ -95,6 +96,7 @@
         };
         this.volume_keyboard_navigation=function(e){
             if(e.keyCode>36&&e.keyCode<41){
+                e.preventDefault();
                 let current_volume=this.video_tag.volume;
                 if(e.keyCode==39||e.keyCode==38)
                     if(current_volume+.1>1) this.video_tag.volume=1;
@@ -120,7 +122,7 @@
                 document.onmouseup=()=>{elm.onmousemove=null;document.onmouseup=null};
         };
         this.volume=function(e,position){
-            let pos=position||(this.line_sound.getBoundingClientRect().bottom-e.pageY)/this.line_sound.clientWidth*100;
+            let pos=position||(this.line_sound.getBoundingClientRect().bottom+window.scrollY-e.pageY)/this.line_sound.clientWidth*100;
             if(pos>100) pos=100;
             else if(pos<0) pos=0;
             pos=Math.round(pos);
