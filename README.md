@@ -1,4 +1,6 @@
-# Custom-video-player 
+# Custom-video-player
+![Javascript](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)
+
 HTML video tag has default controls that we can't change, fortunately the tag can be modified with javascript and we can add controls with html as well as use css styles.
 
 This program was designed to manage multiple videos and it only needs the structure html to work. In addition, the user can control the video using the keyboard.
@@ -46,3 +48,6 @@ When the width is lower than 400px looks like this
         </div>
     </div>
 ```
+
+## LICENSE
+[GPLv3.0](LICENSE)
